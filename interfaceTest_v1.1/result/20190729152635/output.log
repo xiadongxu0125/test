@@ -1,0 +1,21 @@
+2019-07-29 15:26:36,587 - root - INFO - ********TEST START********
+2019-07-29 15:26:36,791 - root - INFO - Active_repayment_OK  - Code:成功 - msg:成功
+2019-07-29 15:26:36,974 - root - INFO - Active_repayment_NO  - Code:成功 - msg:成功
+2019-07-29 15:26:37,315 - root - INFO - Application_quota_APP_ok - Code:成功 - msg:成功
+2019-07-29 15:26:37,635 - root - INFO - Application_quota_H5_ok - Code:成功 - msg:成功
+2019-07-29 15:26:37,812 - root - INFO - Bank_Information_ok - Code:成功 - msg:成功
+2019-07-29 15:26:37,869 - root - INFO - Card_replacement_OK  - Code:成功 - msg:成功
+2019-07-29 15:26:37,918 - root - INFO - Card_replacement_NO  - Code:成功 - msg:成功
+2019-07-29 15:26:37,994 - root - INFO - DDActive_repayment_OK  - Code:成功 - msg:成功
+2019-07-29 15:26:38,553 - root - INFO - Generating_orders_ok - Code:成功 - msg:成功
+2019-07-29 15:26:38,803 - root - INFO - Loan_Verification_ok - Code:成功 - msg:成功
+2019-07-29 15:26:38,946 - root - INFO - Process_authentication_ok - Code:成功 - msg:成功
+2019-07-29 15:26:39,041 - root - INFO - test0000001_ok - Code:成功 - msg:成功
+2019-07-29 15:26:39,124 - root - INFO - test0000001_notmobileno - Code:成功 - msg:成功
+2019-07-29 15:26:39,296 - root - INFO - trial_OK  - Code:成功 - msg:成功
+2019-07-29 15:26:39,345 - root - INFO - trial_NO  - Code:成功 - msg:成功
+2019-07-29 15:26:39,514 - root - INFO - Verification_OK  - Code:成功 - msg:成功
+2019-07-29 15:26:39,631 - root - INFO - Verification_NO  - Code:成功 - msg:成功
+2019-07-29 15:26:39,734 - root - INFO - DDActive_repayment_OK  - Code:成功 - msg:成功
+2019-07-29 15:26:39,742 - root - INFO - *********TEST END*********
+2019-07-29 15:26:42,284 - root - INFO - The test report has send to developer by email.

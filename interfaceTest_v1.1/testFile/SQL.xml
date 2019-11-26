@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<page>
+    <database name="loancore">
+        <table name="t_ba_iou">
+            <sql id="01">
+                select * from t_ba_iou where IOU_code ='20190618053874234509'
+            </sql>
+            <sql id="02">
+                update t_ba_iou set IOU_STATE ='7008' where IOU_code ='20190618053874234509'
+            </sql>
+         </table>
+    </database>
+    <database name="loanquota">
+        <table name="t_lq_user_scene_base_info">
+            <sql id="01">
+                select VALIDATE_STATE from t_lq_user_scene_base_info where certificate_code ='210181198701256535'
+            </sql>
+            <sql id="02">
+                DELETE FROM t_lq_user_scene_base_info WHERE CERTIFICATE_CODE='210181198701256535'
+            </sql>
+         </table>
+    </database>
+</page>

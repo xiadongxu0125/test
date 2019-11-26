@@ -1,0 +1,27 @@
+2019-07-30 16:37:08,242 - root - INFO - ********TEST START********
+2019-07-30 16:37:08,492 - root - INFO - Active_repayment_OK  - Code:成功 - msg:成功
+2019-07-30 16:37:08,739 - root - INFO - Active_repayment_NO  - Code:成功 - msg:成功
+2019-07-30 16:37:09,155 - root - INFO - Application_quota_APP_ok - Code:成功 - msg:成功
+2019-07-30 16:37:09,514 - root - INFO - Application_quota_H5_ok - Code:成功 - msg:成功
+2019-07-30 16:37:09,641 - root - INFO - Bank_Information_ok - Code:成功 - msg:成功
+2019-07-30 16:37:09,715 - root - INFO - Card_replacement_OK  - Code:成功 - msg:成功
+2019-07-30 16:37:09,778 - root - INFO - Card_replacement_NO  - Code:成功 - msg:成功
+2019-07-30 16:37:09,885 - root - INFO - DDActive_repayment_OK  - Code:成功 - msg:成功
+2019-07-30 16:37:10,745 - root - INFO - Generating_orders_ok - Code:成功 - msg:成功
+2019-07-30 16:37:11,001 - root - INFO - Loan_Verification_ok - Code:成功 - msg:成功
+2019-07-30 16:37:11,146 - root - INFO - Process_authentication_ok - Code:成功 - msg:成功
+2019-07-30 16:37:11,252 - root - INFO - test0000001_ok - Code:成功 - msg:成功
+2019-07-30 16:37:11,354 - root - INFO - test0000001_notmobileno - Code:成功 - msg:成功
+2019-07-30 16:37:11,507 - root - INFO - trial_OK  - Code:成功 - msg:成功
+2019-07-30 16:37:11,566 - root - INFO - trial_NO  - Code:成功 - msg:成功
+2019-07-30 16:37:11,776 - root - INFO - Verification_OK  - Code:成功 - msg:成功
+2019-07-30 16:37:11,923 - root - INFO - Verification_NO  - Code:成功 - msg:成功
+2019-07-30 16:37:12,029 - root - INFO - DDActive_repayment_OK  - Code:成功 - msg:成功
+2019-07-30 16:37:12,237 - root - INFO - Automatic_Matching_ok - Code:成功 - msg:成功
+2019-07-30 16:37:12,420 - root - INFO - Binding_Card_Verification_ok - Code:成功 - msg:成功
+2019-07-30 16:37:12,967 - root - INFO - Four_Elements_Certification_ok - Code:成功 - msg:成功
+2019-07-30 16:37:13,966 - root - INFO - Order_details_ok - Code:成功 - msg:成功
+2019-07-30 16:37:14,210 - root - INFO - total_debt_ok - Code:成功 - msg:成功
+2019-07-30 16:37:14,556 - root - INFO - Verification_Code_ok - Code:成功 - msg:成功
+2019-07-30 16:37:14,683 - root - INFO - View_the_contract_ok - Code:成功 - msg:成功
+2019-07-30 16:37:14,690 - root - INFO - *********TEST END*********
