@@ -1,0 +1,12 @@
+2019-07-03 15:56:45,794 - root - INFO - ********TEST START********
+2019-07-03 15:56:45,922 - root - INFO - test0000001_ok - Code:成功 - msg:成功
+2019-07-03 15:56:46,046 - root - INFO - test0000001_notmobileno - Code:成功 - msg:成功
+2019-07-03 15:56:46,413 - root - INFO - Active_repayment_OK  - Code:成功 - msg:成功
+2019-07-03 15:56:46,787 - root - INFO - Active_repayment_NO  - Code:成功 - msg:成功
+2019-07-03 15:56:47,001 - root - INFO - trial_OK  - Code:成功 - msg:成功
+2019-07-03 15:56:47,067 - root - INFO - trial_NO  - Code:成功 - msg:成功
+2019-07-03 15:56:47,726 - root - INFO - Card_replacement_OK  - Code:成功 - msg:成功
+2019-07-03 15:56:48,208 - root - INFO - Card_replacement_NO  - Code:成功 - msg:成功
+2019-07-03 15:56:48,423 - root - INFO - Verification_OK  - Code:成功 - msg:成功
+2019-07-03 15:56:48,586 - root - INFO - Verification_NO  - Code:成功 - msg:成功
+2019-07-03 15:56:48,591 - root - INFO - *********TEST END*********

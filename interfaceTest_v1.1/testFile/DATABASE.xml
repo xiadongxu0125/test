@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<page>
+    <database name="loanquota">
+           <databasenumber>
+             { "host":"10.10.182.44",
+              "username":"loanquota",
+              "password":"passw0rd",
+              "port" : "3306",
+              "database" :"loanquota"
+            }
+           </databasenumber>
+    </database>
+    <database name="loancore">
+           <databasenumber>
+             { "host":"10.10.182.44",
+              "username":"loancore",
+              "password":"passw0rd",
+              "port" : "3306",
+              "database" :"loancore"
+            }
+           </databasenumber>
+    </database>
+</page>

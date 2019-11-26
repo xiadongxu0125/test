@@ -1,0 +1,2078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Report</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 800px;
+
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+    text-align:center;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>Test Report</h1>
+<p class='attribute'><strong>Start Time:</strong> 2019-07-29 15:26:36</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:03.148634</p>
+<p class='attribute'><strong>Status:</strong> Pass 11 | Failure 7</p>
+
+<p class='description'>Test Description</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td colspan='2'>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='failClass'>
+    <td>paramunittest.testActiverepayment_0</td>
+    <td>Active_repayment_OK </td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+</tr>
+
+<tr id='ft1.1' class='none'>
+    <td colspan='2' class='failCase'><div class='testcase'>testactive_repayment1</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        fail</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/customerOrder/customerActiveRepayment/v1?apiCode=LB0096&amp;appKey=000001&amp;timestamp=1564385196000&amp;bizCode=LBN096&amp;sign=d046afac76477d186f080483f3634d6b
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "db2ffc0e4d2948f8b787b36d67018388",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152623008",
+        "serviceEndTime": "20190729152623161"
+    },
+    "result": {
+        "retCode": "0002",
+        "retMessage": "还款失败,请重新操作"
+    },
+    "status": "20000108",
+    "timestamp": 1564385183161
+}
+接口调用成功！
+Traceback (most recent call last):
+  File "E:\interfaceTest_v1.1\testCase\user\testActiverepayment.py", line 120, in testactive_repayment1
+    self.checkResult()
+  File "E:\interfaceTest_v1.1\testCase\user\testActiverepayment.py", line 139, in checkResult
+    self.assertEqual(self.info['result']["retCode"], self.retCode)
+AssertionError: '0002' != '0000'
+- 0002
+?    ^
++ 0000
+?    ^
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.testActiverepayment_1</td>
+    <td>Active_repayment_NO </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td colspan='2' class='none'><div class='testcase'>testactive_repayment1</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/customerOrder/customerActiveRepayment/v1?apiCode=LB0096&amp;appKey=000001&amp;timestamp=1564385196000&amp;bizCode=LBN096&amp;sign=d046afac76477d186f080483f3634d6b
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "bb2cde714b5045db9a0cff97c5f23eb1",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152623202",
+        "serviceEndTime": "20190729152623346"
+    },
+    "result": {
+        "retCode": "0002",
+        "retMessage": "还款失败,请重新操作"
+    },
+    "status": "20000108",
+    "timestamp": 1564385183346
+}
+接口调用成功！
+调用接口还款失败：还款失败,请重新操作
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.testApplication_quota_APP_0</td>
+    <td>Application_quota_APP_ok</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td colspan='2' class='none'><div class='testcase'>testApplication_quota_APP</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        pass</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/bigdata/notify/v1?apiCode=LB0106&amp;appKey=000001&amp;timestamp=1564385196000&amp;bizCode=LBN106&amp;sign=8275ea751b62bee144c457f2b90f476f
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "33a507c2e0264a6ba668e718b8e62051",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152623392",
+        "serviceEndTime": "20190729152623685"
+    },
+    "result": {
+        "decisionCode": "1413",
+        "productTypeCode": "02",
+        "retCode": "0000",
+        "retMessage": "操作成功"
+    },
+    "status": "20000108",
+    "timestamp": 1564385183685
+}
+接口调用成功！
+调用接口还款成功！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.Application_quota_H5_0</td>
+    <td>Application_quota_H5_ok</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',1)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td colspan='2' class='none'><div class='testcase'>testApplication_quota_H5</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
+
+    <div id='div_pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/bigdata/notify/v1?apiCode=LB0106&amp;appKey=000001&amp;timestamp=1564385197000&amp;bizCode=LBN106&amp;sign=30eded641ea2e5925b092479ce244e66
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "5c98fd3a932a4acf8193f6ed4eab796c",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152623736",
+        "serviceEndTime": "20190729152624002"
+    },
+    "result": {
+        "decisionCode": "1414",
+        "productTypeCode": "02",
+        "retCode": "0000",
+        "retMessage": "操作成功"
+    },
+    "status": "20000108",
+    "timestamp": 1564385184002
+}
+接口调用成功！
+调用接口还款成功！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.testBank_Information_0</td>
+    <td>Bank_Information_ok</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',1)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td colspan='2' class='none'><div class='testcase'>testBank_Information</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
+        pass</a>
+
+    <div id='div_pt5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/bankinfo/list/v1?apiCode=LB0112&amp;appKey=000001&amp;timestamp=1564385197000&amp;bizCode=LBN112&amp;sign=c7bc22d9d135a2be3f5df97ffec090d5
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "e2ad82014708461fa5c096b3dd4273aa",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152624054",
+        "serviceEndTime": "20190729152624130"
+    },
+    "result": {
+        "retCode": "0000",
+        "retMessage": "成功",
+        "tLbBankInfoDTOS": [
+            {
+                "bankCardValid": "",
+                "bankName": "工商银行",
+                "bankNo": "ICBC",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 19,
+                "image": "http://10.10.182.42/group1/M00/00/08/Cgq2Kl0CAbaAO36xAAAbCCy_TOY043.png",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "中国银行",
+                "bankNo": "BOC",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 21,
+                "image": "http://10.10.182.42//group1/M00/00/03/Cgq2Klzk7ESAZ0CTAAAbJmyWnbI610.png",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "广发银行",
+                "bankNo": "GDB",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 22,
+                "image": "http://10.10.182.42//group1/M00/00/03/Cgq2Klzk7DiAO3GzAAAXZFwNMVc397.png",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "建设银行",
+                "bankNo": "CCB",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 23,
+                "image": "http://10.10.182.42//group1/M00/00/03/Cgq2Klzk7CuACpsEAAATRzCK5CM325.png",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "交通银行",
+                "bankNo": "BCM",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 24,
+                "image": "",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "民生银行",
+                "bankNo": "CMBC",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 25,
+                "image": "http://10.10.182.42//group1/M00/00/03/Cgq2Klzk7AyAPs4hAAAkLzRvcjI940.png",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "平安银行",
+                "bankNo": "PAB",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 26,
+                "image": "http://10.10.182.42//group1/M00/00/03/Cgq2Klzk6-WAO-GxAAAS_6MoFLY150.png",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "浦发银行",
+                "bankNo": "SPDB",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 27,
+                "image": "http://10.10.182.42//group1/M00/00/03/Cgq2Klzk69KAR3UsAAATdfuF810875.png",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "上海银行",
+                "bankNo": "SHB",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 28,
+                "image": "http://10.10.182.42//group1/M00/00/03/Cgq2Klzk67-AGEgOAAAQW8ZEPYw054.png",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "兴业银行",
+                "bankNo": "CIB",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 29,
+                "image": "http://10.10.182.42//group1/M00/00/03/Cgq2Klzk67CAZ9zHAAAUx7IK-_o125.png",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "邮政银行",
+                "bankNo": "PSBC",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 30,
+                "image": "http://10.10.182.42//group1/M00/00/03/Cgq2Klzk66KATfhJAAAQCKntqIc770.png",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "招商银行",
+                "bankNo": "CMB",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 31,
+                "image": "http://10.10.182.42//group1/M00/00/03/Cgq2Klzk65SALjfjAABxppZQc_w735.png",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "中信银行",
+                "bankNo": "CITIC",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 32,
+                "image": "http://10.10.182.42/group1/M00/00/08/Cgq2Klz4rNaAN7laAAAbCCy_TOY331.png",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            },
+            {
+                "bankCardValid": "",
+                "bankName": "广发银行-网银渠道",
+                "bankNo": "CGB",
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "firstCharacter": "",
+                "id": 35,
+                "image": "",
+                "isEasyAccess": "",
+                "isHotBank": "",
+                "opUserId": 0,
+                "orderNo": 0,
+                "payForAnother": "",
+                "rollbackMoney": "",
+                "userOrgId": 0,
+                "validateState": ""
+            }
+        ]
+    },
+    "status": "20000108",
+    "timestamp": 1564385184130
+}
+接口调用成功！
+获取银行信息成功！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>paramunittest.testCard_replacement_0</td>
+    <td>Card_replacement_OK </td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c6',1)">Detail</a></td>
+</tr>
+
+<tr id='ft6.1' class='none'>
+    <td colspan='2' class='failCase'><div class='testcase'>testcard_replacement</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.1')" >
+        fail</a>
+
+    <div id='div_ft6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/bankinfo/bankcard/change?apiCode=LB0078&amp;appKey=000001&amp;timestamp=1564385197000&amp;bizCode=LBN078&amp;sign=be7d76acd24147f4277e9c1a8b909f49
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "7591f493a6b843a8b4effe168ade3014",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152624230",
+        "serviceEndTime": "20190729152624250"
+    },
+    "result": {
+        "retCode": "0001",
+        "retMessage": "无此订单信息"
+    },
+    "status": "20000108",
+    "timestamp": 1564385184250
+}
+接口调用成功！
+Traceback (most recent call last):
+  File "E:\interfaceTest_v1.1\testCase\user\testCard_replacement.py", line 122, in testcard_replacement
+    self.checkResult()
+  File "E:\interfaceTest_v1.1\testCase\user\testCard_replacement.py", line 141, in checkResult
+    self.assertEqual(self.info['result']["retCode"], self.retCode)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>paramunittest.testCard_replacement_1</td>
+    <td>Card_replacement_NO </td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c7',1)">Detail</a></td>
+</tr>
+
+<tr id='ft7.1' class='none'>
+    <td colspan='2' class='failCase'><div class='testcase'>testcard_replacement</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.1')" >
+        fail</a>
+
+    <div id='div_ft7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/bankinfo/bankcard/change?apiCode=LB0078&amp;appKey=000001&amp;timestamp=1564385197000&amp;bizCode=LBN078&amp;sign=be7d76acd24147f4277e9c1a8b909f49
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "cd628b5110c541c99461a33fc0555d51",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152624279",
+        "serviceEndTime": "20190729152624298"
+    },
+    "result": {
+        "retCode": "0001",
+        "retMessage": "无此订单信息"
+    },
+    "status": "20000108",
+    "timestamp": 1564385184298
+}
+接口调用成功！
+Traceback (most recent call last):
+  File "E:\interfaceTest_v1.1\testCase\user\testCard_replacement.py", line 122, in testcard_replacement
+    self.checkResult()
+  File "E:\interfaceTest_v1.1\testCase\user\testCard_replacement.py", line 141, in checkResult
+    self.assertEqual(self.info['result']["retCode"], self.retCode)
+AssertionError: '0001' != '0002'
+- 0001
+?    ^
++ 0002
+?    ^
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>paramunittest.testDDActiverepayment_0</td>
+    <td>DDActive_repayment_OK </td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',1)">Detail</a></td>
+</tr>
+
+<tr id='ft8.1' class='none'>
+    <td colspan='2' class='failCase'><div class='testcase'>testDDActive_repayment</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft8.1')" >
+        fail</a>
+
+    <div id='div_ft8.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft8.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft8.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lo/advancerepayment/insert/v1?apiCode=LO0008&amp;appKey=000001&amp;timestamp=1564385197000&amp;bizCode=APN008&amp;sign=80d0c7d9ebe8f49c30f77ea94ba02f0f
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "b3eb7f4f47c74176a4140c3102c0e91e",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152624327",
+        "serviceEndTime": "20190729152624364"
+    },
+    "result": {
+        "deductionInfo": null,
+        "listId": "",
+        "retCode": "0001",
+        "retMessage": "业务处理失败:未找到报文，可能已经清理，请联系管理员",
+        "transactionNumber": ""
+    },
+    "status": "20000108",
+    "timestamp": 1564385184364
+}
+接口调用成功！
+Traceback (most recent call last):
+  File "E:\interfaceTest_v1.1\testCase\user\testDDActive_repayment.py", line 120, in testDDActive_repayment
+    self.checkResult()
+  File "E:\interfaceTest_v1.1\testCase\user\testDDActive_repayment.py", line 139, in checkResult
+    self.assertEqual(self.info['result']["retCode"], self.retCode)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>paramunittest.testGenerating_orders_0</td>
+    <td>Generating_orders_ok</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c9',1)">Detail</a></td>
+</tr>
+
+<tr id='ft9.1' class='none'>
+    <td colspan='2' class='failCase'><div class='testcase'>testGenerating_orders</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.1')" >
+        fail</a>
+
+    <div id='div_ft9.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/applicationInfo/submitApplyInfo/v1?apiCode=LB0084&amp;appKey=000001&amp;timestamp=1564385197000&amp;bizCode=LBN084&amp;sign=910c7342846ef44ef86262c8189d842d
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "f4f644e743d34d1681b9e178ba255e6d",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152624404",
+        "serviceEndTime": "20190729152624930"
+    },
+    "result": {
+        "retCode": "0002",
+        "retMessage": "系统繁忙,请稍后再试"
+    },
+    "status": "20000108",
+    "timestamp": 1564385184930
+}
+接口调用成功！
+Traceback (most recent call last):
+  File "E:\interfaceTest_v1.1\testCase\user\testGenerating_orders.py", line 120, in testGenerating_orders
+    self.checkResult()
+  File "E:\interfaceTest_v1.1\testCase\user\testGenerating_orders.py", line 139, in checkResult
+    self.assertEqual(self.info['result']["retCode"], self.retCode)
+AssertionError: '0002' != '0000'
+- 0002
+?    ^
++ 0000
+?    ^
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>paramunittest.testLoan_Verification_0</td>
+    <td>Loan_Verification_ok</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c10',1)">Detail</a></td>
+</tr>
+
+<tr id='ft10.1' class='none'>
+    <td colspan='2' class='failCase'><div class='testcase'>testLoan_Verification</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.1')" >
+        fail</a>
+
+    <div id='div_ft10.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/applicationInfo/validationAttachmentInfo/v1?apiCode=LB0082&amp;appKey=000001&amp;timestamp=1564385198000&amp;bizCode=LBN082&amp;sign=44761ab7f3a8a4129eaeffcd726dde7b
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "f0904b0ce12c4ffb89ddbebbeca69190",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152624975",
+        "serviceEndTime": "20190729152625169"
+    },
+    "result": {
+        "retCode": "0002",
+        "retMessage": "单次提现金额需大于1000元，您的可用额度小于1000，暂时不可提现"
+    },
+    "status": "20000108",
+    "timestamp": 1564385185169
+}
+接口调用成功！
+Traceback (most recent call last):
+  File "E:\interfaceTest_v1.1\testCase\user\testLoan_Verification.py", line 122, in testLoan_Verification
+    self.checkResult()
+  File "E:\interfaceTest_v1.1\testCase\user\testLoan_Verification.py", line 141, in checkResult
+    self.assertEqual(self.info['result']["retCode"], self.retCode)
+AssertionError: '0002' != '0000'
+- 0002
+?    ^
++ 0000
+?    ^
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.testProcess_authentication_0</td>
+    <td>Process_authentication_ok</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c11',1)">Detail</a></td>
+</tr>
+
+<tr id='pt11.1' class='hiddenRow'>
+    <td colspan='2' class='none'><div class='testcase'>testProcess_authentication</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.1')" >
+        pass</a>
+
+    <div id='div_pt11.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/customer/getAuth/v1?apiCode=LB0076&amp;appKey=000001&amp;timestamp=1564385198000&amp;bizCode=LBN076&amp;sign=ec5046da551295bf2dbd019522186935
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "a7fba2e51df547d9a24cc1fb721ecf7d",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152625223",
+        "serviceEndTime": "20190729152625299"
+    },
+    "result": {
+        "productTypeCode": "02",
+        "retCode": "0000",
+        "retMessage": "成功",
+        "tLbCustomerAuthDTO": {
+            "authId": 45,
+            "baseExt2": "",
+            "baseExt3": "",
+            "baseExt4": "",
+            "baseExt5": "",
+            "baseExt6": "",
+            "baseExt7": "",
+            "contactInfo": "1",
+            "createDate": "2019-07-16 00:00:00",
+            "createOrgNameExt": "",
+            "createUserNameExt": "",
+            "customerId": 72,
+            "editDate": "2019-07-29 00:00:00",
+            "faceInfo": "1",
+            "opUserId": 0,
+            "personalInfo": "1",
+            "realName": "1",
+            "serviceProvider": "1",
+            "userOrgId": 0
+        },
+        "tLbCustomerPersonalDTO": {
+            "address": "东站街道",
+            "baseExt2": "",
+            "baseExt3": "",
+            "baseExt4": "",
+            "baseExt5": "",
+            "baseExt6": "",
+            "baseExt7": "",
+            "birthdate": "19870125",
+            "carNum": 0,
+            "certificateCode": "210181198701256535",
+            "certificateType": "1",
+            "cityLevel": "",
+            "createDate": "20190716102504",
+            "createOrgNameExt": "",
+            "createUserId": 0,
+            "createUserNameExt": "",
+            "customerCode": "P000000424",
+            "customerId": 72,
+            "customerName": "夏东旭",
+            "customerType": "1",
+            "devicenumber": "",
+            "dimension": "",
+            "editDate": "20190724104433",
+            "editUserId": 0,
+            "educationNature": "",
+            "email": "",
+            "hasCar": "",
+            "hasChild": "",
+            "hasHouse": "",
+            "houseCon": "",
+            "idcardAddress": "辽宁省新民市东蛇山子乡大同村149号",
+            "idcardLimit": "20350718",
+            "idcardLimitStartDate": "20150718",
+            "idcardOffice": "新民市公安局",
+            "idcardRegionCode": "",
+            "incomeMonth": 0,
+            "incomeYear": 0,
+            "isExistYYSInfo": "",
+            "isLogin": "",
+            "lifeSpan": 0,
+            "longitude": "",
+            "mainCustomer": null,
+            "marrageState": "",
+            "mobileNo": "17600121987",
+            "nation": "汉",
+            "opUserId": 0,
+            "orgId": 0,
+            "ownerId": 0,
+            "postCode": "",
+            "professionType": "1",
+            "psword": "",
+            "qq": "",
+            "regionCode": "210104",
+            "remark": "",
+            "schoolGrade": "",
+            "schoolMajor": "",
+            "schoolName": "",
+            "sex": "1",
+            "telNo": "",
+            "topDegree": "",
+            "topEducation": "",
+            "userOrgId": 0,
+            "weChat": ""
+        },
+        "tLbProductAuthitemConf": [
+            {
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "effectiveDays": "1",
+                "id": 17,
+                "opUserId": 0,
+                "productIdentificationNm": "01",
+                "productIdentificationType": "1",
+                "productTypeCode": "02",
+                "productTypeName": "自营海金花",
+                "repaeatIdentificationSupport": "1",
+                "suitChannel": "2",
+                "userOrgId": 0,
+                "validateState": "1"
+            },
+            {
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "effectiveDays": "1",
+                "id": 18,
+                "opUserId": 0,
+                "productIdentificationNm": "02",
+                "productIdentificationType": "4",
+                "productTypeCode": "02",
+                "productTypeName": "自营海金花",
+                "repaeatIdentificationSupport": "1",
+                "suitChannel": "2",
+                "userOrgId": 0,
+                "validateState": "1"
+            },
+            {
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "effectiveDays": "1",
+                "id": 19,
+                "opUserId": 0,
+                "productIdentificationNm": "03",
+                "productIdentificationType": "5",
+                "productTypeCode": "02",
+                "productTypeName": "自营海金花",
+                "repaeatIdentificationSupport": "2",
+                "suitChannel": "2",
+                "userOrgId": 0,
+                "validateState": "1"
+            },
+            {
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "effectiveDays": "1",
+                "id": 20,
+                "opUserId": 0,
+                "productIdentificationNm": "05",
+                "productIdentificationType": "3",
+                "productTypeCode": "02",
+                "productTypeName": "自营海金花",
+                "repaeatIdentificationSupport": "1",
+                "suitChannel": "1",
+                "userOrgId": 0,
+                "validateState": "1"
+            },
+            {
+                "baseExt2": "",
+                "baseExt3": "",
+                "baseExt4": "",
+                "baseExt5": "",
+                "baseExt6": "",
+                "baseExt7": "",
+                "createOrgNameExt": "",
+                "createUserId": 0,
+                "createUserNameExt": "",
+                "crerteDate": null,
+                "editDate": null,
+                "editUserId": 0,
+                "effectiveDays": "1",
+                "id": 21,
+                "opUserId": 0,
+                "productIdentificationNm": "04",
+                "productIdentificationType": "2",
+                "productTypeCode": "02",
+                "productTypeName": "自营海金花",
+                "repaeatIdentificationSupport": "1",
+                "suitChannel": "2",
+                "userOrgId": 0,
+                "validateState": "1"
+            }
+        ],
+        "userSceneBaseInfo": {
+            "businessSceneCode": "S2019042400002",
+            "businessSceneName": "易贷",
+            "certificateCode": "210181198701256535",
+            "creditState": "1",
+            "customerCode": "P000000424",
+            "customerLevel": "A",
+            "customerName": "夏东旭",
+            "endDate": "20200729",
+            "freezeQuota": 0,
+            "quotaDisableState": "",
+            "quotaEffective": "",
+            "quotaState": "2",
+            "quotaType": "1",
+            "sceneTotalCreditQuota": 0.0,
+            "startDate": "20190729",
+            "totalNotRepayment": 0.0,
+            "usableQuota": 0.0,
+            "usedQuota": 0.0,
+            "userSceneQuotaCode": "UB2019072915262365417978"
+        }
+    },
+    "status": "20000108",
+    "timestamp": 1564385185299
+}
+接口调用成功！
+调用接口流程认证成功！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.testQuota_query_0</td>
+    <td>test0000001_ok</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c12',1)">Detail</a></td>
+</tr>
+
+<tr id='pt12.1' class='hiddenRow'>
+    <td colspan='2' class='none'><div class='testcase'>testQuota_query</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.1')" >
+        pass</a>
+
+    <div id='div_pt12.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lq/scene/queryUserSceneQuota/v1?apiCode=LQ0015&amp;appKey=000001&amp;timestamp=1564385198000&amp;bizCode=LQN015&amp;sign=5a4ddc65367939100c4daf174d2b6ef0
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "14ff51c1b7a6432eb4cc566573dbca53",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152625365",
+        "serviceEndTime": "20190729152625399"
+    },
+    "result": {
+        "retCode": "0000",
+        "retMessage": "成功",
+        "userSceneBaseInfo": {
+            "businessSceneCode": "S2019042400002",
+            "businessSceneName": "易贷",
+            "certificateCode": "210181198701256535",
+            "creditState": "1",
+            "customerCode": "P000000424",
+            "customerLevel": "A",
+            "customerName": "夏东旭",
+            "endDate": "20200729",
+            "freezeQuota": 0,
+            "quotaDisableState": "",
+            "quotaEffective": "",
+            "quotaState": "2",
+            "quotaType": "1",
+            "sceneTotalCreditQuota": 0.0,
+            "startDate": "20190729",
+            "totalNotRepayment": 0.0,
+            "usableQuota": 0.0,
+            "usedQuota": 0.0,
+            "userSceneQuotaCode": "UB2019072915262365417978"
+        }
+    },
+    "status": "20000108",
+    "timestamp": 1564385185399
+}
+接口调用成功！
+额度查询成功！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.testQuota_query_1</td>
+    <td>test0000001_notmobileno</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c13',1)">Detail</a></td>
+</tr>
+
+<tr id='pt13.1' class='hiddenRow'>
+    <td colspan='2' class='none'><div class='testcase'>testQuota_query</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.1')" >
+        pass</a>
+
+    <div id='div_pt13.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lq/scene/queryUserSceneQuota/v1?apiCode=LQ0015&amp;appKey=000001&amp;timestamp=1564385199000&amp;bizCode=LQN015&amp;sign=505dca9af19a1122b0532dfcc068653c
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "84269bcde38341d7bc0a77bfbb0d1b8c",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152625449",
+        "serviceEndTime": "20190729152625488"
+    },
+    "result": {
+        "retCode": "0001",
+        "retMessage": "用户额度查询异常！"
+    },
+    "status": "20000108",
+    "timestamp": 1564385185488
+}
+接口调用成功！
+额度查询失败：用户额度查询异常！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.testtrial_0</td>
+    <td>trial_OK </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c14',1)">Detail</a></td>
+</tr>
+
+<tr id='pt14.1' class='hiddenRow'>
+    <td colspan='2' class='none'><div class='testcase'>testtrial</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt14.1')" >
+        pass</a>
+
+    <div id='div_pt14.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt14.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt14.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/applicationInfo/repaychargeplanTrial/v1?apiCode=LB0087&amp;appKey=000001&amp;timestamp=1564385199000&amp;bizCode=LBN087&amp;sign=be815d0ff26d20f6884506bc5dc0cdb5
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "e0c613d57a7d4139bcebce19c2287723",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152625542",
+        "serviceEndTime": "20190729152625671"
+    },
+    "result": {
+        "planList": {
+            "chargeDetailList": [],
+            "chargeList": [],
+            "deptAmount": 0,
+            "deptCode": "",
+            "iouCode": "20190729026002350440",
+            "planList": [
+                {
+                    "periodNo": 1,
+                    "repayAmount": 1060.59,
+                    "repayDate": "20190829",
+                    "repayInterest": 90.0,
+                    "repayPrincipal": 970.59
+                },
+                {
+                    "periodNo": 2,
+                    "repayAmount": 1060.59,
+                    "repayDate": "20190929",
+                    "repayInterest": 60.88,
+                    "repayPrincipal": 999.71
+                },
+                {
+                    "periodNo": 3,
+                    "repayAmount": 1060.59,
+                    "repayDate": "20191029",
+                    "repayInterest": 30.89,
+                    "repayPrincipal": 1029.7
+                }
+            ],
+            "retCode": "0000",
+            "retMessage": "SUCCESS",
+            "totalAmount": 3181.77,
+            "totalCharge": 0,
+            "totalInterest": 181.77,
+            "totalPrincipal": 3000.0,
+            "transactionNumber": ""
+        },
+        "retCode": "0000",
+        "retMessage": "操作成功"
+    },
+    "status": "20000108",
+    "timestamp": 1564385185671
+}
+接口调用成功！
+调用接口还款成功！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.testtrial_1</td>
+    <td>trial_NO </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c15',1)">Detail</a></td>
+</tr>
+
+<tr id='pt15.1' class='hiddenRow'>
+    <td colspan='2' class='none'><div class='testcase'>testtrial</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.1')" >
+        pass</a>
+
+    <div id='div_pt15.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/applicationInfo/repaychargeplanTrial/v1?apiCode=LB0087&amp;appKey=000001&amp;timestamp=1564385199000&amp;bizCode=LBN087&amp;sign=be815d0ff26d20f6884506bc5dc0cdb5
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "4f93d56059c84477b9dd9e6dc46d2a61",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152625705",
+        "serviceEndTime": "20190729152625726"
+    },
+    "result": {
+        "retCode": "0002",
+        "retMessage": "用户信息异常"
+    },
+    "status": "20000108",
+    "timestamp": 1564385185726
+}
+接口调用成功！
+调用接口还款失败：用户信息异常
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.testVerification_0</td>
+    <td>Verification_OK </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c16',1)">Detail</a></td>
+</tr>
+
+<tr id='pt16.1' class='hiddenRow'>
+    <td colspan='2' class='none'><div class='testcase'>testverification</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt16.1')" >
+        pass</a>
+
+    <div id='div_pt16.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt16.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt16.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/bankinfo/bankcard/verifySms?apiCode=LB0079&amp;appKey=000001&amp;timestamp=1564385199000&amp;bizCode=LBN079&amp;sign=0cf5897752e9eff602eab8a2b11ee437
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "d748db7496b34ca28b3fe62910cbb781",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152625766",
+        "serviceEndTime": "20190729152625882"
+    },
+    "result": {
+        "retCode": "0000",
+        "retMessage": "成功"
+    },
+    "status": "20000108",
+    "timestamp": 1564385185882
+}
+接口调用成功！
+调用接口换卡验证成功！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.testVerification_1</td>
+    <td>Verification_NO </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c17',1)">Detail</a></td>
+</tr>
+
+<tr id='pt17.1' class='hiddenRow'>
+    <td colspan='2' class='none'><div class='testcase'>testverification</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.1')" >
+        pass</a>
+
+    <div id='div_pt17.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/lb/bankinfo/bankcard/verifySms?apiCode=LB0079&amp;appKey=000001&amp;timestamp=1564385199000&amp;bizCode=LBN079&amp;sign=0cf5897752e9eff602eab8a2b11ee437
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "bde4d68480574a5389a742888bfb2e4a",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152625932",
+        "serviceEndTime": "20190729152625996"
+    },
+    "result": {
+        "retCode": "0001",
+        "retMessage": "绑卡失败"
+    },
+    "status": "20000108",
+    "timestamp": 1564385185996
+}
+接口调用成功！
+调用接口换卡验证成功！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>paramunittest.testYWZActive_repayment_0</td>
+    <td>DDActive_repayment_OK </td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c18',1)">Detail</a></td>
+</tr>
+
+<tr id='ft18.1' class='none'>
+    <td colspan='2' class='failCase'><div class='testcase'>testYWZActive_repayment</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft18.1')" >
+        fail</a>
+
+    <div id='div_ft18.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft18.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft18.1: 
+请求地址：http://10.10.182.41:8080/loanapi/biz/cba/pay/doCollectionByApp/v1?appKey=Q00002&amp;apiCode=CBA0064&amp;bizCode=LON019&amp;timestamp=1564385199000&amp;sign=1e040b867123af52039f93bae4bc65e4
+
+请求返回值：
+{
+    "info": "成功",
+    "message": "成功",
+    "responseHeader": {
+        "accessNumber": "6cd5f11c6309425ba9ec47a6588dca92",
+        "code": "0000",
+        "message": "成功",
+        "serviceBeginTime": "20190729152626055",
+        "serviceEndTime": "20190729152626091"
+    },
+    "result": {
+        "accessNumber": "6cd5f11c6309425ba9ec47a6588dca92",
+        "busiCode": "LON019",
+        "callUrl": "",
+        "contractNo": "DS2019070200000014",
+        "description": "",
+        "draftId": 0,
+        "draftStatus": "",
+        "frontTransNo2": "",
+        "interfaceNo": "CBA0064",
+        "iouCode": "20190702191021827751",
+        "requestMsg": {
+            "accountBankName": "BOC",
+            "accountName": "夏东旭",
+            "accountType": "2",
+            "busiCode": "SSHK",
+            "cardLast": "",
+            "cardVcode": "",
+            "lineNumber": "",
+            "paymentAmount": 354.59,
+            "repayAccountMobileNo": "18611666387",
+            "repayAccountNo": "6217860400000001904",
+            "repayBankCode": "BOC",
+            "repayCardType": "DC",
+            "repayPlanList": [
+                {
+                    "deadlineDate": "20200329",
+                    "iouCode": "20190702191021827751",
+                    "periodNo": 3,
+                    "repayAmount": 354.59,
+                    "repayInterest": 0,
+                    "repayOverdueFine": 0,
+                    "repayPenalty": 0,
+                    "repayPrincipal": 0
+                }
+            ]
+        },
+        "requestMsgBody": "",
+        "responseMsg": {
+            "resultDesc": "",
+            "retCode": "3",
+            "retTime": "",
+            "successAmount": 0
+        },
+        "responseMsgBody": "",
+        "retCode": "0001",
+        "retMessage": "借据信息不能为空！",
+        "retTime": "20190729152626",
+        "systemSource": "Q00002",
+        "transNo": "2e036e8f-9aad-4d58-b3ae-7f6454593d4d",
+        "transTime": "20190729152626",
+        "transactionNumber": "ODCBA002220201901051635152128118"
+    },
+    "status": "20000108",
+    "timestamp": 1564385186091
+}
+接口调用成功！
+Traceback (most recent call last):
+  File "E:\interfaceTest_v1.1\testCase\user\testYWZActive_repayment.py", line 122, in testYWZActive_repayment
+    self.checkResult()
+  File "E:\interfaceTest_v1.1\testCase\user\testYWZActive_repayment.py", line 141, in checkResult
+    self.assertEqual(self.info['result']["retCode"], self.retCode)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td colspan='2'>Total</td>
+    <td>18</td>
+    <td>11</td>
+    <td>7</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

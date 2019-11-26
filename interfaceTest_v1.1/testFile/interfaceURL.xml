@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface>
+	
+	<url name="Quota_query">
+        <group>/loanapi/biz/lq/scene</group>
+        <module>queryUserSceneQuota</module>
+        <action>v1</action>
+    </url>
+    <url name="Order_details">
+        <group>/loanapi/biz/lb/customerOrder</group>
+        <module>queryAllOrderInfo</module>
+        <action>v1</action>
+    </url>
+    <url name="total_debt">
+        <group>/loanapi/biz/lb/customerOrder</group>
+        <module>qeuryOrderDetailInfo</module>
+        <action>v1</action>
+    </url>
+    <url name="View_the_contract">
+        <group>/loanapi/biz/ex/customerContract</group>
+        <module>queryContractMsg</module>
+        <action>v1</action>
+    </url>
+    <url name="Verification_Code">
+        <group>/loanapi/biz/lb/smsverify</group>
+        <module>sendSynchro</module>
+        <action>v1</action>
+    </url>
+    <url name="Four_Elements_Certification">
+        <group>/loanapi/biz/lb/bankinfo/bankcard</group>
+        <module>verify</module>
+        <action>v1</action>
+    </url>
+    <url name="Binding_Card_Verification">
+        <group>/loanapi/biz/lb/bankinfo/bankcard</group>
+        <module>bind</module>
+        <action>verifySms</action>
+    </url>
+    <url name="Automatic_Matching">
+        <group>/loanapi/biz/lb/applicationInfo</group>
+        <module>autoMatchRule</module>
+        <action>v1</action>
+    </url>
+    <url name="Bank_Information">
+        <group>/loanapi/biz/lb/bankinfo</group>
+        <module>list</module>
+        <action>v1</action>
+    </url>
+    <url name="Loan_Verification">
+        <group>/loanapi/biz/lb/applicationInfo</group>
+        <module>validationAttachmentInfo</module>
+        <action>v1</action>
+    </url>
+    <url name="Process_authentication">
+        <group>/loanapi/biz/lb/customer</group>
+        <module>getAuth</module>
+        <action>v1</action>
+    </url>
+    <url name="Generating_orders">
+        <group>/loanapi/biz/lb/applicationInfo</group>
+        <module>submitApplyInfo</module>
+        <action>v1</action>
+    </url>
+    <url name="Application_quota">
+        <group>/loanapi/biz/lb/bigdata</group>
+        <module>notify</module>
+        <action>v1</action>
+    </url>
+    <url name="DDActive_repayment">
+        <group>/loanapi/biz/lo/advancerepayment</group>
+        <module>insert</module>
+        <action>v1</action>
+    </url>
+    <url name="Active_repayment">
+        <group>/loanapi/biz/lb/customerOrder</group>
+        <module>customerActiveRepayment</module>
+        <action>v1</action>
+    </url>
+    <url name="YWZActive_repayment">
+        <group>/loanapi/biz/cba/pay</group>
+        <module>doCollectionByApp</module>
+        <action>v1</action>
+    </url>
+    <url name="trial">
+        <group>/loanapi/biz/lb/applicationInfo</group>
+        <module>repaychargeplanTrial</module>
+        <action>v1</action>
+    </url>
+    <url name="Card_replacement">
+        <group>/loanapi/biz/lb/bankinfo</group>
+        <module>bankcard</module>
+        <action>change</action>
+    </url>
+    <url name="Verification">
+        <group>/loanapi/biz/lb/bankinfo</group>
+        <module>bankcard</module>
+        <action>verifySms</action>
+    </url>
+</interface>
